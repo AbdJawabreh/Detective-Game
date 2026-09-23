@@ -5,10 +5,18 @@ background: linear-gradient(
     #0A111A
 );
 }
+
+.p-size{
+    font-size:25px;
+}
+h2{
+    color:#F1F1F1;
+}
 p,.case-level{
     color:#A7B0BA;
 }
-h1,h3{
+h1{
+ font-size: 50px;
      color:#F1F1F1;
 }
 
@@ -77,4 +85,33 @@ height: 140px;
 .start-button:hover {
     background: #B51F30;
     transform: translateY(-2px);
+}
+.img-background{
+    min-height: 300px;
+  padding: 50px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  background:
+    linear-gradient(to right, #0b0f17 35%, rgba(11, 15, 23, 0.1) 100%),
+    url("imgs/مشهد المحقق بدون نص.png");
+  background-size: cover;
+  background-position: right center;
+  background-repeat: no-repeat;
+}
+
+.img-background::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, #0b0f17, transparent 40%);
+  pointer-events: none;
+}
+
+.img-background > * {
+  position: relative;
+  z-index: 1;
 }
