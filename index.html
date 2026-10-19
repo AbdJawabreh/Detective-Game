@@ -1,129 +1,272 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detective</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Detective</title>
+    <link rel="stylesheet" href="index.css" />
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font -->
+  </head>
 
-  <link rel="stylesheet" href="index.css">
-
-</head>
-
-<body>
-  <section class="img-background">
-  <div class="img-background-content">
-    <h1>Welcome, Detective</h1>
-    <p class="p-size">Choose a case and start your investigation.</p>
-  </div>
-</section>
-
-<h2 class="section-title">Available Cases</h2>
-  <!-- case (1)  -->
-  <section class="case-warp">
-    <div class="case-body">
-      <div class="case-span">
-        <img class="case-image" src="imgs/صورة Canva AI _٢٣ سبتمبر ٢٠٢٦، ١٠_٣٠_٣٩ م (1).jpg" alt="Case 1">
-        <br>
+  <body>
+    <nav id="sidebar">
+      <div class="logo">
+        <img src="./imgs/Dark Navy Thumbprint Logo.png" alt="logo" />
+        <div class="logo-text">
+          <h2>The Detective</h2>
+          <p>Find the Truth</p>
+        </div>
       </div>
-      <p class="case-name">the missing heiress</p>
-      <span class="case-level">Difficulty:</span>
-      <div class="stars" case-level="3"></div>
-      <br>
-      <p>
-        A wealthy heiress has gon navigate the dangerous world of high society to solve the case.
-      </p>
-      <button class="start-button">Start</button>
-
-    </div>
-    </div>
-    <!-- case(2) -->
-    <div class="case-body">
-      <div class="case-span">
-        <img class="case-image" src="imgs/صورة Canva AI _٢٣ سبتمبر ٢٠٢٦، ١٠_٣٠_٣٩ م (1).jpg" alt="Case 1">
-        <br>
+      <div class="toggle"></div>
+      <!-- Navigation Links -->
+      <div class="nav-links">
+        <ul>
+          <li class="active">
+            <a href="#">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 -960 960 960"
+                width="24px"
+                fill="#e3e3e3"
+              >
+                <path
+                  d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z"
+                />
+              </svg>
+              <span>Home</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 -960 960 960"
+                width="24px"
+                fill="#e3e3e3"
+              >
+                <path
+                  d="M120-80q-33 0-56.5-23.5T40-160v-440h80v440h680v80H120Zm160-160q-33 0-56.5-23.5T200-320v-440h200v-80q0-33 23.5-56.5T480-920h160q33 0 56.5 23.5T720-840v80h200v440q0 33-23.5 56.5T840-240H280Zm0-80h560v-360H280v360Zm200-440h160v-80H480v80ZM280-320v-360 360Z"
+                />
+              </svg>
+              <span>Cases</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 -960 960 960"
+                width="24px"
+                fill="#e3e3e3"
+              >
+                <path
+                  d="m370-80-16-128q-13-5-24.5-12T307-235l-119 50L78-375l103-78q-1-7-1-13.5v-27q0-6.5 1-13.5L78-585l110-190 119 50q11-8 23-15t24-12l16-128h220l16 128q13 5 24.5 12t22.5 15l119-50 110 190-103 78q1 7 1 13.5v27q0 6.5-2 13.5l103 78-110 190-118-50q-11 8-23 15t-24 12L590-80H370Zm70-80h79l14-106q31-8 57.5-23.5T639-327l99 41 39-68-86-65q5-14 7-29.5t2-31.5q0-16-2-31.5t-7-29.5l86-65-39-68-99 42q-22-23-48.5-38.5T533-694l-13-106h-79l-14 106q-31 8-57.5 23.5T321-633l-99-41-39 68 86 64q-5 15-7 30t-2 32q0 16 2 31t7 30l-86 65 39 68 99-42q22 23 48.5 38.5T427-266l13 106Zm42-180q58 0 99-41t41-99q0-58-41-99t-99-41q-59 0-99.5 41T342-480q0 58 40.5 99t99.5 41Zm-2-140Z"
+                />
+              </svg>
+              <span>Settings</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 -960 960 960"
+                width="24px"
+                fill="#e3e3e3"
+              >
+                <path
+                  d="M367-527q-47-47-47-113t47-113q47-47 113-47t113 47q47 47 47 113t-47 113q-47 47-113 47t-113-47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Zm80-80h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm296.5-343.5Q560-607 560-640t-23.5-56.5Q513-720 480-720t-56.5 23.5Q400-673 400-640t23.5 56.5Q447-560 480-560t56.5-23.5ZM480-640Zm0 400Z"
+                />
+              </svg>
+              <span>Profile</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 -960 960 960"
+                width="24px"
+                fill="#e3e3e3"
+              >
+                <path
+                  d="M440-280h80v-240h-80v240Zm68.5-331.5Q520-623 520-640t-11.5-28.5Q497-680 480-680t-28.5 11.5Q440-657 440-640t11.5 28.5Q463-600 480-600t28.5-11.5ZM480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-32₀Z"
+                />
+              </svg>
+              <span>About</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 -960 960 960"
+                width="24px"
+                fill="#e3e3e3"
+              >
+                <path
+                  d="M513.5-254.5Q528-269 528-290t-14.5-35.5Q499-340 478-340t-35.5 14.5Q428-311 428-290t14.5 35.5Q457-240 478-240t35.5-14.5ZM442-394h74q0-33 7.5-52t42.5-52q26-26 41-49.5t15-56.5q0-56-41-86t-97-30q-57 0-92.5 30T342-618l66 26q5-18 22.5-39t53.5-21q32 0 48 17.5t16 38.5q0 20-12 37.5T506-526q-44 39-54 59t-10 73Zm38 314q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"
+                />
+              </svg>
+              <span>Help</span>
+            </a>
+          </li>
+        </ul>
       </div>
-      <p class="case-name">the missing heiress</p>
-      <span class="case-level">Difficulty:</span>
-      <div class="stars" case-level="3"></div>
-      <br>
-      <p>
-        A wealthy heiress has gon navigate the dangerous world of high society to solve the case.
-      </p>
-      <button class="start-button">Start</button>
-
-    </div>
-    </div>
-    <!-- case(3) -->
-    <div class="case-body">
-      <div class="case-span">
-        <img class="case-image" src="imgs/صورة Canva AI _٢٣ سبتمبر ٢٠٢٦، ١٠_٣٠_٣٩ م (1).jpg" alt="Case 1">
-        <br>
+      <!-- Profile -->
+      <div id="profile">
+        <img
+          src="./imgs/profile.jpg"
+          alt="profile"
+          width="50px"
+          height="50px"
+        />
+        <div>
+          <p class="profile-name">Detective</p>
+          <p class="profile-email">detective@example.com</p>
+        </div>
       </div>
-      <p class="case-name">the missing heiress</p>
-      <span class="case-level">Difficulty:</span>
-      <div class="stars" case-level="3"></div>
-      <br>
-      <p>
-        A wealthy heiress has gon navigate the dangerous world of high society to solve the case.
-      </p>
-      <button class="start-button">Start</button>
+    </nav>
+    <section id="main-content">
+      <section class="img-background">
+        <div class="img-background-content">
+          <h1>Welcome, Detective</h1>
+          <p class="p-size">Choose a case and start your investigation.</p>
+        </div>
+      </section>
 
-    </div>
-    </div>
-    <!-- case(4) -->
-    <div class="case-body">
-      <div class="case-span">
-        <img class="case-image" src="imgs/صورة Canva AI _٢٣ سبتمبر ٢٠٢٦، ١٠_٣٠_٣٩ م (1).jpg" alt="Case 1">
-        <br>
-      </div>
-      <p class="case-name">the missing heiress</p>
-      <span class="case-level">Difficulty:</span>
-      <div class="stars" case-level="3"></div>
-      <br>
-      <p>
-        A wealthy heiress has gon navigate the dangerous world of high society to solve the case.
-      </p>
-      <button class="start-button">Start</button>
-
-    </div>
-    </div>
-    <!-- case(5) -->
-    <div class="case-body">
-      <div class="case-span">
-        <img class="case-image" src="imgs/صورة Canva AI _٢٣ سبتمبر ٢٠٢٦، ١٠_٣٠_٣٩ م (1).jpg" alt="Case 1">
-        <br>
-      </div>
-      <p class="case-name">the missing heiress</p>
-      <span class="case-level">Difficulty:</span>
-      <div class="stars" case-level="3"></div>
-      <br>
-      <p>
-        A wealthy heiress has gon navigate the dangerous world of high society to solve the case.
-      </p>
-      <button class="start-button">Start</button>
-
-    </div>
-    </div>
-    <!-- case(6) -->
-    <div class="case-body">
-      <div class="case-span">
-        <img class="case-image" src="imgs/صورة Canva AI _٢٣ سبتمبر ٢٠٢٦، ١٠_٣٠_٣٩ م (1).jpg" alt="Case 1">
-        <br>
-      </div>
-      <p class="case-name">the missing heiress</p>
-      <span class="case-level">Difficulty:</span>
-      <div class="stars" case-level="3"></div>
-      <br>
-      <p>
-        A wealthy heiress has gon navigate the dangerous world of high society to solve the case.
-      </p>
-      <button class="start-button">Start</button>
-
-    </div>
-    </div>
-  </section>
-  <script src="index.js"></script>
-</body>
-
+      <h2 class="section-title">Available Cases</h2>
+      <!-- case (1)  -->
+      <section class="case-warp">
+        <div class="case-body">
+          <div class="case-span">
+            <img
+              class="case-image"
+              src="imgs/صورة Canva AI _٢٣ سبتمبر ٢٠٢٦، ١٠_٣٠_٣٩ م (1).jpg"
+              alt="Case 1"
+            />
+            <br />
+          </div>
+          <p class="case-name">the missing heiress</p>
+          <span class="case-level">Difficulty:</span>
+          <div class="stars" case-level="3"></div>
+          <p id="case-description">
+            A wealthy heiress has gon navigate the dangerous world of high
+            society to solve the case.
+          </p>
+          <button class="start-button">Start</button>
+        </div>
+        <!-- case(2) -->
+        <div class="case-body">
+          <div class="case-span">
+            <img
+              class="case-image"
+              src="imgs/صورة Canva AI _٢٣ سبتمبر ٢٠٢٦، ١٠_٣٠_٣٩ م (1).jpg"
+              alt="Case 1"
+            />
+            <br />
+          </div>
+          <p class="case-name">the missing heiress</p>
+          <span class="case-level">Difficulty:</span>
+          <div class="stars" case-level="3"></div>
+          <p id="case-description">
+            A wealthy heiress has gon navigate the dangerous world of high
+            society to solve the case.
+          </p>
+          <button class="start-button">Start</button>
+        </div>
+        <!-- case(3) -->
+        <div class="case-body">
+          <div class="case-span">
+            <img
+              class="case-image"
+              src="imgs/صورة Canva AI _٢٣ سبتمبر ٢٠٢٦، ١٠_٣٠_٣٩ م (1).jpg"
+              alt="Case 1"
+            />
+            <br />
+          </div>
+          <p class="case-name">the missing heiress</p>
+          <span class="case-level">Difficulty:</span>
+          <div class="stars" case-level="3"></div>
+          <p id="case-description">
+            A wealthy heiress has gon navigate the dangerous world of high
+            society to solve the case.
+          </p>
+          <button class="start-button">Start</button>
+        </div>
+        <!-- case(4) -->
+        <div class="case-body">
+          <div class="case-span">
+            <img
+              class="case-image"
+              src="imgs/صورة Canva AI _٢٣ سبتمبر ٢٠٢٦، ١٠_٣٠_٣٩ م (1).jpg"
+              alt="Case 1"
+            />
+            <br />
+          </div>
+          <p class="case-name">the missing heiress</p>
+          <span class="case-level">Difficulty:</span>
+          <div class="stars" case-level="3"></div>
+          <p id="case-description">
+            A wealthy heiress has gon navigate the dangerous world of high
+            society to solve the case.
+          </p>
+          <button class="start-button">Start</button>
+        </div>
+        <!-- case(5) -->
+        <div class="case-body">
+          <div class="case-span">
+            <img
+              class="case-image"
+              src="imgs/صورة Canva AI _٢٣ سبتمبر ٢٠٢٦، ١٠_٣٠_٣٩ م (1).jpg"
+              alt="Case 1"
+            />
+            <br />
+          </div>
+          <p class="case-name">the missing heiress</p>
+          <span class="case-level">Difficulty:</span>
+          <div class="stars" case-level="3"></div>
+          <p id="case-description">
+            A wealthy heiress has gon navigate the dangerous world of high
+            society to solve the case.
+          </p>
+          <button class="start-button">Start</button>
+        </div>
+        <!-- case(6) -->
+        <div class="case-body">
+          <div class="case-span">
+            <img
+              class="case-image"
+              src="imgs/صورة Canva AI _٢٣ سبتمبر ٢٠٢٦، ١٠_٣٠_٣٩ م (1).jpg"
+              alt="Case 1"
+            />
+            <br />
+          </div>
+          <p class="case-name">the missing heiress</p>
+          <span class="case-level">Difficulty:</span>
+          <div class="stars" case-level="3"></div>
+          <p id="case-description">
+            A wealthy heiress has gon navigate the dangerous world of high
+            society to solve the case.
+          </p>
+          <button class="start-button">Start</button>
+        </div>
+      </section>
+    </section>
+    <script src="index.js"></script>
+  </body>
 </html>
